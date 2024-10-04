@@ -27,44 +27,6 @@ russian1 = """
 ⭐ Доктор (Justiniano Deluxe Resort)
 """
 
-russian2 = """ 
-
-*Уважаемые гости!*
-
-Резервация *A'LA CARTE* ресторанов производится ежедневно 
-с *11:00* до *12:00* в отделе по работе с гостями (Guest Relation).
-*_Запись происходит за день до посещения_*
- 
-*График работы ресторанов:*
-
-_Рыбный ресторан_:
-Каждый день с _19:00_ - _21:00_
-*СРЕДА* - выходной.
-
-_Итальянский ресторан_:
-Каждый день с _19:00_ - _21:00_
-*ПЯТНИЦА* - выходной. 
-
-_Барбекю ресторан_:
-Каждый день с _19:00_ - _21:00_
-*ВОСКРЕСЕНЬЕ* - выходной.
-
-_BARBECU A'LA CARTE_ ресторан можно посетить за *дополнительную плату*.
-
-(?) Как рассчитываются количество посещений в ресторан?
-
-- До 14 дней отдыха - одно посещение бесплатного ресторана на выбор.
-
-- Более 14 дней отдыха - два посещения бесплатных ресторанов.
-
-(?) Почему необходимо подходить к отделу по работе с гостями для записи в ресторан?
-
-- Резервация в ресторан происходит в порядке живой очереди.
-
-- При резервации вы выбираете меню и получаете проходной билет в ресторан.
-
-"""
-
 doitch = """ 
 Liebe Gäste!
 *Herzlich willkommen im Justiniano Club Alanya Hotel!*
@@ -95,29 +57,6 @@ doitch1 = """
 ⭐ Arzt (Justiniano Deluxe Resort)
 """
 
-doitch2 = """ 
-*Liebe Gäste!*
-
-Reservierungen für das Restaurant *A'LA CARTE* werden täglich vorgenommen 
-von *11:00* bis *12:00* Uhr in der Abteilung Guest Relation.
-*_Die Reservierungen werden am Tag vor dem Besuch vorgenommen._*
- 
-*Öffnungszeiten der Restaurants:*
-
-Fischrestaurant:
-Jeden Tag von _19:00 - 21:00_ Uhr.
-*MITTWOCH* ist ein Ruhetag.
-
-Italienisches Restaurant:
-Jeden Tag von _19:00 - 21:00_ Uhr.
-*FREITAG* - Ruhetag. 
-
-Barbecue Restaurant:
-Jeden Tag von _19:00 - 21:00_ Uhr.
-*SONNTAG* - Ruhetag.
-
-Das Restaurant _BARBECU A'LA CARTE_ kann gegen einen Aufpreis *besucht werden*.
-"""
 
 english = """ 
 Dear Guests!
@@ -149,29 +88,6 @@ english1 = """
 ⭐ Doctor (Justiniano Deluxe Resort)
 """
 
-english2 = """
-*Dear Guests!*
-
-*A'LA CARTE* restaurant reservations are being made everyday
-from *11:00* to *12:00* at Guest Relation Department.
-*_Reservations are made the day before you visit A'LA CARTE restaurant._*
-
-*Restaurant working schedule:*
-
-_Fish Restaurant:_
-Every day from _19:00_ - _21:00_.
-*WEDNESDAY* - day off.
-
-_Italian Restaurant:_
-Every day from _19:00_ - _21:00_.
-*FRIDAY* - day off.
-
-_Barbecue Restaurant:_
-Every day from _19:00_ - _21:00_.
-*SUNDAY* - day off.
-
-_BARBECUE A'LA CARTE_ restaurant can be visited for an *additional fee*.
-"""
 
 turkish = """
 Değerli Misafirlerimiz!
@@ -203,38 +119,14 @@ turkish1 = """
 ⭐ Doktor (Justiniano Deluxe Resort)
 """
 
-turkish2 = """ 
-*Değerli misafirlerimiz!*
-
-*A'LA CARTE* restoran rezervasyonu günlük olarak yapılmaktadır 
-*11:00* - *12:00* saatleri arasında Misafir İlişkileri bölümünde.
-*_Rezervasyonlar ziyaretten bir gün önce yapılır_*
- 
-*Restoranların çalışma saatleri:*
-
-Balık Restoranı:
-Her gün _19:00 - 21:00_ arası.
-*ÇARŞAMBA* - günü tatil.
-
-İtalyan Restoranı:
-Her gün _19:00 - 21:00_ saatleri arasında.
-*CUMA* - izin günü. 
-
-Barbekü Restoranı:
-Her gün _19:00 - 21:00_ saatleri arasında.
-*PAZAR* -  günü tatil.
-
-_BARBECU A'LA CARTE_ restoran ek *ücret karşılığında ziyaret edilebilir*.
-"""
-
 special = """ 
-Я очень сильно ♥
+stext
 """
 
 special1 = """ 
-Люблю тебя ♥
+stext
 """
 
 special2 = """ 
-Ты самая лучшая ♥
+stext
 """

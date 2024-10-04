@@ -22,21 +22,44 @@ class Sender_Message:
         if send == "complete":
             print("Отправка сообщений на номера завершена.")
 
+    # def chrome_options(self):
+    #     try:
+    #         print("Options Status:", end="")
+    #         self.chrome_options = Options()
+    #         profile_path = r"C:\Users\User\AppData\Local\Google\Chrome\User Data"
+    #         profile_directory = "Default"  # Имя профиля
+    #         self.chrome_options.add_argument("--headless")
+    #         self.chrome_options.add_argument("--disable-gpu")
+    #         self.chrome_options.add_argument("--no-sandbox")
+    #         self.chrome_options.add_argument(f"user-data-dir={profile_path}")
+    #         self.chrome_options.add_argument(f"profile-directory={profile_directory}")
+    #         print("arguments complete")
+    #         driver_path = ChromeDriverManager().install()
+    #         print("ChromeDriver path:", driver_path)
+
+    #         # driver_path = ChromeDriverManager(version="129.0.6668.90").install()
+    #         # print("ChromeDriver path:", driver_path)
+    #         self.driver = webdriver.Chrome(options=self.chrome_options)
+    #         print("webdriver.Chrome")
+    #         print("Complete")
+    #     except Exception as error:
+    #         print(error)
+    #         print(os.path.basename(__file__), "chrome_options")
+    #         input("press any key to continue ...")
+
     def mainInstruction(self):
         try:
             print("Options Status:", end="")
             self.chrome_options = Options()
             profile_path = r"C:\Users\User\AppData\Local\Google\Chrome\User Data"
             profile_directory = "Default"  # Имя профиля
-            # self.chrome_options.add_argument("--headless")
-            # self.chrome_options.add_argument("--disable-gpu")
-            # self.chrome_options.add_argument("--no-sandbox")
+            self.chrome_options.add_argument("--headless")
+            self.chrome_options.add_argument("--disable-gpu")
+            self.chrome_options.add_argument("--no-sandbox")
             self.chrome_options.add_argument(f"user-data-dir={profile_path}")
             self.chrome_options.add_argument(f"profile-directory={profile_directory}")
             print("arguments complete")
             print("initializing webdriver.Chrome ...\nStatus:", end="")
-            # driver_path = ChromeDriverManager(version="129.0.6668.90").install()
-            # print("ChromeDriver path:", driver_path)
             self.driver = webdriver.Chrome(options=self.chrome_options)
             print("Complete")
         except Exception as error:

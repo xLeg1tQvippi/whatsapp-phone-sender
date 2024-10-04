@@ -6,7 +6,7 @@ import ph_numbers
 import re
 import copy
 import os, importlib, subprocess
-import sender_withPyQt, menu_PyQt
+import sender_withPyQt6, menu_PyQt
 from collections import deque
 
 

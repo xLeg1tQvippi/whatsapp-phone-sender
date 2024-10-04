@@ -124,8 +124,6 @@ class MainWindowSender(QWidget):
         self.label.setText(f'id: {id}<br> country: {country}<br>language: {lang}')
     def check_first_letter(self, text):
         try:
-            if text == '':
-                raise IncorrectNumber
             text = list(text)
             if text[0] == '8':
                 #Если первое число 8 то заменяет его на +7
@@ -134,12 +132,11 @@ class MainWindowSender(QWidget):
                 new = ''.join(text)
                 special = new.replace('special', 's')
                 text = list(special)
-                print(text)
             elif text[:2] == ['0', '0']: 
                 #Если первые два числа в номере равны двум нулям - Заменяет их на +
                 text.pop(0); text[0] = "+"
             
-            elif text[0] == '0' or text[0] == '':
+            elif text[0] == '0' or text[0] == '' or text[:2] == ['0','+'] or text[:2] == ['+','8'] or text[:2] == ['+','+']:
                 raise IncorrectNumber
             
             elif '+' not in text[0]:
@@ -147,7 +144,7 @@ class MainWindowSender(QWidget):
                 text.insert(0, '+')
                 self.inputnum.setText(''.join(text))
                 raise PlusError
-            
+            print(text[:3])
         except (PlusError, IncorrectNumber) as error:
             return [False, text, error]
         
