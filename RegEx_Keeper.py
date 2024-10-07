@@ -1,39 +1,79 @@
 import re
-country_list = ['Netherlands','United_Kingdom','Hungary','Latvia','Estonia','Hungary','Denmark','Lithuania','Uzbekistan','Luxembourg','Azerbaijan','Algeria','Austria','Special','Belgium','Germany', 'Russia', 'Romania', 'Ukrain', 'France', 'Turkey', 'Czech', 'Belarus', 'Moldova', 'Slovakia', 'Serbia', 'Bosnia', 'Polska', 'Macedonia', 'Canada', 'Georgia', 'Bulgaria', 'Kazakhstan']
-country_configuration = {'Germany':'Doitch',
-                         'Russia':'Russian',
-                         'Kazakhstan':'Russian',
-                         'Ukrain':'Russian',
-                         'France':'English',
-                         'Turkey':'Turkish',
-                         'Czech':'Russian',
-                         'Belarus':'Russian',
-                         'Latvia':'English',
-                         'Moldova':'Russian',
-                         'Slovakia':'English',
-                         'Serbia':'English',
-                         'Bosnia':'English',
-                         'Polska':'English',
-                         'Macedonia':'English',
-                         'Canada':'English',
-                         'Georgia':'English',
-                         'Bulgaria':'English',
-                         'Romania':'English',
-                         'Belgium':'English',
-                         'Special':'Special',
-                         'Austria':'English',
-                         'Algeria':'English',
-                         'Azerbaijan':'Russian',
-                         'Luxembourg':'Doitch',
-                         'Uzbekistan':'Russian',
-                         'Lithuania':'English',
-                         'Denmark':'Russian',
-                         'Hungary':'English',
-                         'Estonia':'English',
-                         'Hungary':'English',
-                         'United_Kingdom':'English',
-                         'Netherlands':'English'}
-num_checker = re.compile(r"""
+
+country_list = [
+    "Sweden",
+    "Spain",
+    "Netherlands",
+    "United_Kingdom",
+    "Hungary",
+    "Latvia",
+    "Estonia",
+    "Denmark",
+    "Lithuania",
+    "Uzbekistan",
+    "Luxembourg",
+    "Azerbaijan",
+    "Algeria",
+    "Austria",
+    "Special",
+    "Belgium",
+    "Germany",
+    "Russia",
+    "Romania",
+    "Ukrain",
+    "France",
+    "Turkey",
+    "Czech",
+    "Belarus",
+    "Moldova",
+    "Slovakia",
+    "Serbia",
+    "Bosnia",
+    "Polska",
+    "Macedonia",
+    "Canada",
+    "Georgia",
+    "Bulgaria",
+    "Kazakhstan",
+]
+country_configuration = {
+    "Germany": "Doitch",
+    "Russia": "Russian",
+    "Kazakhstan": "Russian",
+    "Ukrain": "Russian",
+    "France": "English",
+    "Turkey": "Turkish",
+    "Czech": "Russian",
+    "Belarus": "Russian",
+    "Latvia": "English",
+    "Moldova": "Russian",
+    "Slovakia": "English",
+    "Serbia": "English",
+    "Bosnia": "English",
+    "Polska": "English",
+    "Macedonia": "English",
+    "Canada": "English",
+    "Georgia": "English",
+    "Bulgaria": "English",
+    "Romania": "English",
+    "Belgium": "English",
+    "Special": "Special",
+    "Austria": "English",
+    "Algeria": "English",
+    "Azerbaijan": "Russian",
+    "Luxembourg": "Doitch",
+    "Uzbekistan": "Russian",
+    "Lithuania": "English",
+    "Denmark": "Russian",
+    "Hungary": "English",
+    "Estonia": "English",
+    "United_Kingdom": "English",
+    "Netherlands": "English",
+    "Spain": "English",
+    "Sweden": "English",
+}
+num_checker = re.compile(
+    r"""
         (?P<Germany>\+49)\s*(?:\((\d{3})\)\s*|\d{1,4}\s*)\d{1,8}(?:[\s-]\d{1,8})* |
         (?P<Russia>\+7)\s*?(\d{3})\s*?(\d{3})(\d{2})(\d{2}) |
         (?P<Ukrain>\+380)(\d{2})(\d{3})(\d{2})(\d{2}) |
@@ -61,8 +101,12 @@ num_checker = re.compile(r"""
         (?P<Uzbekistan>\+998)(90)(\d{3})(\d{2})(\d{2}) |
         (?P<Lithuania>\+370)(6)(\d{2})(\d{3})(\d{2}) |
         (?P<Denmark>\+45)(\d{2})(\d{2})(\d{2})(\d{2}) |
-        (?P<Hungary>\+36)(1|20)(\d{3,4})(\d{4,5}) |
+        (?P<Hungary>\+36)(1|20|30)(\d{3,4})(\d{4,5}) |
         (?P<Estonia>\+372)(\d{2}|\d{3})(\d{3})(\d{3}) |
         (?P<United_Kingdom>\+44)(\d{1,2})(\d{4})(\d{4}) |
-        (?P<Netherlands>\+31)(6|20)(\d{7,8})
-        """, re.X | re.I)
+        (?P<Netherlands>\+31)(6|20)(\d{7,8}) |
+        (?P<Spain>\+34)(\d{2,3})(\d{3})(\d{3}) |
+        (?P<Sweden>\+46)(\d{2})(\d{3})(\d{2})(\d{2})
+        """,
+    re.X | re.I,
+)
