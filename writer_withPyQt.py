@@ -176,7 +176,7 @@ class MainWindowSender(QWidget):
                 # Если в начале нету плюса, программа ставит плюс и меняет номер.
                 text.insert(0, "+")
                 self.inputnum.setText("".join(text))
-                raise PlusError
+                # raise PlusError
             print(text[:3])
 
         except:
