@@ -36,7 +36,7 @@ class Menu(QWidget):
         self.check_pass()
 
     def add_num(self):
-        self.send_win = writer_withPyQt.MainWindowSender()
+        self.send_win = writer_withPyQt.MainWindowWriter()
         self.send_win.show()
         self.close()
 

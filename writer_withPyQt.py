@@ -10,7 +10,7 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import QTimer
 import sys, time, old_numbers, ph_numbers, RegEx_Keeper, re
 import menu_PyQt, sqlite3
-import DeletingNums
+import remove_menu
 
 
 class PlusError(Exception):
@@ -53,7 +53,7 @@ class SavingNumError(Exception):
     text = "Произошла ошибка при сохранении номера."
 
 
-class MainWindowSender(QWidget):
+class MainWindowWriter(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
         self.resize(300, 120)
@@ -87,7 +87,7 @@ class MainWindowSender(QWidget):
         self.setLayout(self.vbox)
 
     def show_delete(self):
-        deleting = self.show_delete = DeletingNums.Delete()
+        deleting = self.show_delete = remove_menu.Menu()
         deleting.show()
         self.close()
 
@@ -344,6 +344,6 @@ class MainWindowSender(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    win = MainWindowSender()
+    win = MainWindowWriter()
     win.show()
     sys.exit(app.exec())
