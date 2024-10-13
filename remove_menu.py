@@ -14,6 +14,10 @@ import writer_withPyQt
 import remove_number_activeList
 import remove_number_db
 
+""" 
+this file is up to deleting function of numbers.
+"""
+
 
 class Menu(QWidget):
     def __init__(self, parent=None):

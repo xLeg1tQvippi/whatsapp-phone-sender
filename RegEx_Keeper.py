@@ -74,8 +74,8 @@ country_configuration = {
 }
 num_checker = re.compile(
     r"""
-        (?P<Germany>\+49)\s*(?:\((\d{3})\)\s*|\d{1,4}\s*)\d{1,8}(?:[\s-]\d{1,8})* |
-        (?P<Russia>\+7)\s*?(\d{3})\s*?(\d{3})(\d{2})(\d{2}) |
+        (?P<Germany>\+49)(\d{3})(\d{7,8}) |
+        (?P<Russia>\+7)(\d{3})(\d{3})(\d{2})(\d{2}) |
         (?P<Ukrain>\+380)(\d{2})(\d{3})(\d{2})(\d{2}) |
         (?P<France>\+33)(\d{1})(\d{1,2})(\d{1,2})(\d{2})(\d{2})(\d{2}) |
         (?P<Turkey>\+90)(\d{3})(\d{3})(\d{2})(\d{2}) |
@@ -93,7 +93,7 @@ num_checker = re.compile(
         (?P<Bulgaria>\+359)(\d{1,2})(\d{6,7}) |
         (?P<Romania>\+40)(\d{2,3})(\d{6,7}) |
         (?P<Belgium>\+32)(\d{1,3})(\d{6,7}) |
-        (?P<Special>\+7)\s*?(\d{3})\s*?(\d{3})(\d{2})(\d{2})[special] |
+        (?P<Special>\+7)(\d{3})(\d{3})(\d{2})(\d{2})[special] |
         (?P<Austria>\+43)(\d{1,3})(\d{3,4})(\d{3,4}) |
         (?P<Algeria>\+213)(\d{3})(\d{2})(\d{2})(\d{2}) |
         (?P<Azerbaijan>\+994)(\d{2})(\d{6,7}) |
